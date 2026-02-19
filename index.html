@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Project Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Mini Client Project Dashboard</h1>
+
+    <div class="add-project">
+      <input type="text" id="clientName" placeholder="Client Name">
+      <input type="text" id="projectName" placeholder="Project Name">
+
+      <div class="date-group">
+        <label>Client Deadline</label>
+        <input type="date" id="clientDeadline">
+      </div>
+
+      <div class="date-group">
+        <label>Internal Deadline</label>
+        <input type="date" id="internalDeadline">
+      </div>
+
+      <select id="status">
+        <option value="Pending">Pending</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Completed">Completed</option>
+      </select>
+
+      <button id="addBtn">Add Project</button>
+    </div>
+
+    <div id="projectList" class="project-list"></div>
+  </div>
+
+  <!-- Delete Confirmation Modal -->
+  <div id="deleteModal" class="modal">
+    <div class="modal-card">
+      <h3>Delete Project?</h3>
+      <p>This project will be permanently removed. Are you sure?</p>
+      <button id="confirmDelete">Yes, Delete</button>
+      <button id="cancelDelete">Cancel</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
